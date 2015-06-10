@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true"
+  android:id="@+id/root_view">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bck"
+      android:paddingLeft="10dip"
+      android:paddingRight="10dip" >
+
+      <!-- Header Starts -->
+
+
+      
+                    <LinearLayout
+		            android:id="@+id/header"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true"
+		            android:background="@layout/header_gradient"
+		            android:orientation="horizontal"
+		            android:paddingBottom="5dip"
+		            android:paddingTop="5dip">
+		            
+		             <TextView
+				          android:id="@+id/reg"
+				          android:layout_width="match_parent"
+				          android:layout_height="wrap_content"
+				          android:gravity="center_vertical|center_horizontal"
+				          android:text="@string/registration"
+				          android:textColor="#372c24"
+				          android:textSize="20dp" />
+		            
+		            </LinearLayout> 
+ 
+
+     
+      
+
+      <!-- Header Ends -->
+
+
+      <!-- Footer Start -->
+      <!-- Place footer next to header to set z-index property to minus value -->
+      <!-- Footer Ends -->
+
+
+      <!-- Login Form -->
+      <!-- Login Form Ends -->
+	  <TextView
+          android:id="@+id/dis_type"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/header"
+          android:text="@string/d_type"
+          
+          android:layout_alignParentLeft="true"
+          android:paddingBottom="25dip"
+		  android:paddingTop="25dip"
+          android:textColor="#a27e2c" />
+	  
+	  
+      <Spinner
+          android:id="@+id/dis_menu"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/dis_type"
+          android:entries="@array/dis_array"
+          android:layout_alignParentLeft="true"
+          android:paddingLeft="20dip"
+          android:paddingRight="20dip"
+          android:background="@drawable/disspinner"
+		  />
+
+      <TextView
+          android:id="@+id/worker_type"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/dis_menu"
+          android:text="@string/w_type"
+          
+          android:layout_alignParentLeft="true"
+          android:paddingBottom="25dip"
+		  android:paddingTop="25dip"
+          android:textColor="#a27e2c" 
+          />
+      
+      <Spinner
+          android:id="@+id/worker_menu"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/worker_type"
+          
+          android:layout_alignParentRight="true"
+          android:paddingLeft="20dip"
+          android:paddingRight="20dip"
+          android:background="#cfb1c4"
+		  />
+      <TextView
+          android:id="@+id/blank"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/worker_menu"
+          android:layout_alignParentLeft="true"
+          android:paddingBottom="5dip"
+		  android:paddingTop="5dip"
+          android:textColor="#a27e2c" 
+          />
+      <EditText
+			                    android:layout_width="fill_parent"
+			                    android:layout_height="wrap_content"
+			                    android:layout_below="@id/blank"
+			                    android:height="1000sp"
+			                    android:id="@+id/other_worker"
+			                    android:layout_alignParentLeft="true"
+			                    android:autoLink="all"
+			                    android:hint="@string/other_worker_hint"
+			                    android:lines="5"
+			                    android:minLines="1"
+			                    android:gravity="top|left"
+			                    android:maxLines="10"
+			                    android:scrollbars="none"
+			                    android:inputType="textMultiLine|textCapSentences"
+			                    android:background="#ffffff"
+			                    android:maxLength="100"
+			                    />
+       <TextView
+          android:id="@+id/blank1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/other_worker"
+          android:layout_alignParentLeft="true"
+          android:paddingBottom="25dip"
+		  android:paddingTop="25dip"
+          android:textColor="#a27e2c" 
+          />
+      <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_below="@id/blank1"
+        android:layout_centerInParent="true"
+        android:text="@string/register"
+         />
+  </RelativeLayout>
+
+</ScrollView>
